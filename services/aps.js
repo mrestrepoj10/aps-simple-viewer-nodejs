@@ -21,7 +21,7 @@ async function getInternalToken() {
 }
 
 service.getViewerToken = async () => {
-    return await authenticationClient.getTwoLeggedToken(APS_CLIENT_ID, APS_CLIENT_SECRET, [Scopes.ViewablesRead]);
+    return await authenticationClient.getTwoLeggedToken(APS_CLIENT_ID, APS_CLIENT_SECRET, [Scopes.ViewablesRead, Scopes.DataRead]);
 };
 
 service.ensureBucketExists = async (bucketKey) => {
